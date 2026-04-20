@@ -1,0 +1,103 @@
+:root {
+    --primary: #8b3a3a;
+    --secondary: #f5e6e0;
+    --card-bg: #ffffff;
+    --radius: 12px;
+    --border-color: #8b3a3a;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: Arial, sans-serif;
+    background: var(--secondary);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background: var(--primary);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.school-label {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* NAV */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 10px;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* MAIN */
+main {
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* CARD */
+.card {
+    background: var(--card-bg);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: var(--radius);
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+/* FORM */
+input, select, button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: var(--primary);
+    color: white;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+}

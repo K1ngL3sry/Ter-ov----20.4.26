@@ -1,0 +1,96 @@
+<h2>Zápis do kurzu</h2>
+
+<form action="https://formsubmit.co/…cz" method="POST" enctype="multipart/form-data" onsubmit="return zkontrolujFormular();">
+    <input type="hidden" name="_subject" value="Nová přihláška do kurzu paličkování">
+    <input type="hidden" name="_captcha" value="false">
+
+    <table border="1" width="100%" cellpadding="6" cellspacing="0" bgcolor="#ffeeee">
+        <tr bgcolor="#ffcccc">
+            <td colspan="2" align="center"><b>Přihláška do kurzu</b></td>
+        </tr>
+
+        <tr>
+            <td><b>Jméno a příjmení studenta</b></td>
+            <td><input type="text" name="jmeno" id="jmeno" size="40" required></td>
+        </tr>
+
+        <tr>
+            <td><b>E-mail</b></td>
+            <td><input type="email" name="email" id="email" size="40" required></td>
+        </tr>
+
+        <tr>
+            <td><b>E-mail znovu</b></td>
+            <td><input type="email" name="email2" id="email2" size="40" required></td>
+        </tr>
+
+        <tr>
+            <td><b>Telefon</b></td>
+            <td><input type="tel" name="telefon" id="telefon" size="25" pattern="[0-9+ ]{9,15}" required></td>
+        </tr>
+
+        <tr>
+            <td><b>Výběr kurzu</b></td>
+            <td>
+                <select name="kurz" id="kurz" required>
+                    <option value="">-- vyberte kurz --</option>
+                    <option>Základy paličkování</option>
+                    <option>Tradiční vzory</option>
+                    <option>Šperky z krajky</option>
+                    <option>Vánoční ozdoby</option>
+                    <option>Jemná krajka</option>
+                    <option>Dětské paličkování</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td><b>Zkušenost s paličkováním (v týdnech)</b></td>
+            <td>
+                <input type="range" name="zkusenost" id="zkusenost" min="0" max="52" value="0"
+                oninput="document.getElementById('vystupZkusenost').innerHTML=this.value + ' týdnů';">
+                <br>
+                <span id="vystupZkusenost">0 týdnů</span>
+            </td>
+        </tr>
+
+        <tr>
+            <td><b>Preferovaný termín</b></td>
+            <td>
+                <select name="termin" id="termin" required>
+                    <option value="">-- vyberte termín --</option>
+                    <option>Pondělí dopoledne</option>
+                    <option>Úterý odpoledne</option>
+                    <option>Středa večer</option>
+                    <option>Sobota dopoledne</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td><b>Rodné číslo</b></td>
+            <td><input type="text" name="rodnecislo" id="rodnecislo" size="20" placeholder="např. 905101/1234" required></td>
+        </tr>
+
+        <tr>
+            <td><b>Obrázek oblíbeného podvinku</b></td>
+            <td><input type="file" name="podvinek" id="podvinek" accept=".jpg,.jpeg,.png,.gif,.webp" required></td>
+        </tr>
+
+        <tr>
+            <td colspan="2" align="center">
+                <input type="submit" value="Odeslat přihlášku">
+                <input type="reset" value="Vymazat formulář">
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <div id="chybaFormulare" style="color:rgb(255, 0, 191); font-weight:bold;"></div>
+            </td>
+        </tr>
+    </table>
+</form>
+
+
+
